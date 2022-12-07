@@ -1,10 +1,14 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 
-const HelloWorld = () => {
+interface HelloWorldProps {
+  text: string
+}
+
+const HelloWorld = ({ text }: HelloWorldProps) => {
   return (
     <Box>
-      <Typography variant='h1'>Hello, World!</Typography>
+      <Typography variant='h1'>{text}</Typography>
     </Box>
   )
 }
