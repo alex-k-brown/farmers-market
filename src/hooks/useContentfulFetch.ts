@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 
-const spaceId = '30xxtcjxo5gv'
+const spaceId = process.env.REACT_APP_CONTENTFUL_SPACE_ID
+console.log(spaceId)
+const contentDeliveryToken = process.env.REACT_APP_CONTENTFUL_CONTENT_DELIVERY_TOKEN
 const headers = {
   'Content-Type': 'application/json',
-  Authorization: 'Bearer E-PwyI0Ukdl_Ju5KuvkYvM4t73a9o7kV7JqAGc5cE9k',
+  Authorization: `Bearer ${contentDeliveryToken}`,
 }
 
 export interface ContentfulFetch {
